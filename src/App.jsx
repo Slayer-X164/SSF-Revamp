@@ -4,7 +4,7 @@ import Home from './pages/Home'
 
 const App = () => {
   return (
-    <div className='min-h-screen w-full flex justify-start flex-col items-center'>
+    <div className='min-h-screen w-full flex justify-start flex-col items-center font-inria px-2'>
       <Header/>
       {/* make home page component and mount here */}
       <Home />
