@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './components/Header'
 import Home from './pages/Home'
 import Getinvolved from './components/GetInvolved'
+import Aboutus from './components/Aboutus'
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Header/>
       <Home/>
       <Getinvolved/>
+      <Aboutus></Aboutus>
     </div>
   )
 }

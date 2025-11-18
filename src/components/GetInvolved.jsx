@@ -9,7 +9,7 @@ function Getinvolved() {
         <br></br>
         environment and more
       </p>
-      <div className="mt-7 grid grid-cols-3 gap-13">
+      <div className="mt-7 grid grid-cols-3 gap-y-13 gap-x-24">
         <div className="bg-blue-200 w-[290px] h-68 shadow-[6px_6px_0px_#000]">
           <div className="z-11 w-[270px] h-54 bg-white m-2">
             <h1 className="font-bold text-3xl pt-3 pl-3 pb-3">Volunteer</h1>
@@ -84,7 +84,7 @@ function Getinvolved() {
               Collaborate with us to create a social impact through CSR
               initiatives
             </p>
-            <span className="bg-green-300 ml-3 mt-2 text-[14px] p-1 inline-block">
+            <span className="bg-green-300 ml-3 mt-8 text-[14px] p-1 inline-block">
               Brand Collaboration
             </span>
             <span className="bg-green-300 ml-3 text-[14px] p-1 inline-block">
@@ -120,7 +120,7 @@ function Getinvolved() {
           </button>
         </div>
 
-        <div className="bg-pink-200 w-[290px] h-68 shadow-[6px_6px_0px_#000]">
+        <div className="bg-pink-200 w-[290px] h-68 shadow-[6px_6px_0px_#000] mb-1">
           <div className=" z-11 w-[270px] h-54 bg-white m-2">
             <h1 className="font-bold text-3xl pt-3 pl-3 pb-3">
               Career/Internship
