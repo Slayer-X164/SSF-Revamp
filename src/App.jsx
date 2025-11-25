@@ -7,6 +7,7 @@ import KeyFocus from './pages/KeyFocus'
 import Team from './pages/Team'
 import Collabrations from './pages/Collabrations'
 import Impactstories from './components/ImpactStories'
+import Supportour from './components/Supportour'
 
 const App = () => {
   return (
@@ -27,7 +28,7 @@ const App = () => {
       <Team />
       {/* Collab Page */}
       <Collabrations />
-
+      <Supportour></Supportour>
     </div>
   )
 }
