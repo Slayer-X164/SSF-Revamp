@@ -1,22 +1,23 @@
 import Heart from "../assets/Heart.png";
 import QRcode from "../assets/QR.png";
+import { IoCopyOutline } from "react-icons/io5";
 function Supportour() {
     const handleCopy = (text) => {
         navigator.clipboard.writeText(text);
         alert("Copied : "+text);
     };
     return (
-        <div className="w-full min-h-screen bg-black flex flex-col items-center justify-center">
-            <div>
+        <div className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-4">
+            <div className="w-full  flex flex-col gap-4 justify-center items-center">
                 <div className="flex">
-                    <img src={Heart} className="p-4"></img>
-                    <p className="text-5xl text-white font-bold"><i>Support Our Cause</i></p>
+
+                    <p className=" text-3xl lg:text-5xl gap-4 text-white font-bold flex items-center"><span>   <img src={Heart} className="" ></img></span><i>Support Our Cause</i></p>
                 </div>
-                <p className="text-zinc-500 font-semibold text-center">Your contribution supports education, women empowerment, health & rural <br></br>development</p>
+                <p className="text-zinc-500 font-semibold text-center">Your contribution supports education, women empowerment, health & rural development</p>
             </div>
 
 
-            <div className="flex flex-col lg:flex-row items-center justify-evenly bg-white w-full max-w-[450px] lg:max-w-[980px] mx-auto mt-10 p-4 gap-10">
+            <div className="flex flex-col rounded-sm lg:flex-row items-center justify-evenly bg-white w-full max-w-[450px] lg:max-w-[980px] mx-auto mt-10 p-4 gap-10 pb-12">
 
                 {/* Left Section */}
                 <div className="flex flex-col items-center gap-4">
@@ -32,20 +33,20 @@ function Supportour() {
                         <img src={QRcode} className="w-40 h-40" />
 
                         {/* UPI ID */}
-                        <div className="flex items-center gap-2 bg-white px-4 py-2 mt-4 border-b-2 border-blue-500 shadow-[3px_3px_0px_#000] w-fit">
+                        <div className="flex items-center gap-2 bg-white px-4 py-2 mt-4  shadow-[4px_4px_0px_#2b80ff] w-fit">
                             <span>5375395739@oksbi</span>
 
                             <span
-                                className="text-blue-600 cursor-pointer ml-6"
+                                className="text-blue-600 cursor-pointer ml-6 flex items-center gap-1"
                                 onClick={() => handleCopy("5375395739@oksbi")}
                             >
-                                Copy 📋
+                                Copy <IoCopyOutline />
                             </span>
                         </div>
 
                     </div>
                 </div>
-                <div className="hidden lg:block w-px h-[200px] bg-zinc-400"></div>
+                <div className="hidden lg:block w-px h-[250px] mt-8 bg-zinc-400"></div>
                 <div className="flex flex-col items-center justify-center w-full lg:max-w-[320px]">
 
                     <span className="text-zinc-600 text-center text-lg font-medium">Bank Transfer (NEFT/IMPS)</span>
@@ -56,7 +57,7 @@ function Supportour() {
                             <span className="text-zinc-400">Bank Name</span>
                             <div className="flex items-center gap-2">
                                 <span className="text-zinc-600 font-medium">Union Bank Of India</span>
-                                <span className="text-blue-600 cursor-pointer" onClick={() => handleCopy("Union Bank Of India")}>📋</span>
+                                <span className="text-blue-600 cursor-pointer" onClick={() => handleCopy("Union Bank Of India")}><IoCopyOutline /></span>
                             </div>
                         </div>
 
@@ -64,7 +65,7 @@ function Supportour() {
                             <span className="text-zinc-400">Account No.</span>
                             <div className="flex items-center gap-2">
                                 <span className="text-zinc-600 font-medium">481401010036579</span>
-                                <span className="text-blue-600 cursor-pointer" onClick={() => handleCopy("481401010036579")}>📋</span>
+                                <span className="text-blue-600 cursor-pointer" onClick={() => handleCopy("481401010036579")}><IoCopyOutline /></span>
                             </div>
                         </div>
 
@@ -72,7 +73,7 @@ function Supportour() {
                             <span className="text-zinc-400">IFSC Code</span>
                             <div className="flex items-center gap-2">
                                 <span className="text-zinc-600 font-medium">UBIN0548146</span>
-                                <span className="text-blue-600 cursor-pointer" onClick={() => handleCopy("UBIN0548146")}>📋</span>
+                                <span className="text-blue-600 cursor-pointer" onClick={() => handleCopy("UBIN0548146")}><IoCopyOutline /></span>
                             </div>
                         </div>
 
@@ -80,7 +81,7 @@ function Supportour() {
                             <span className="text-zinc-400">Branch</span>
                             <div className="flex items-center gap-2">
                                 <span className="text-zinc-600 font-medium">Transport Nagar, Rewa</span>
-                                <span className="text-blue-600 cursor-pointer" onClick={() => handleCopy("Transport Nagar, Rewa")}>📋</span>
+                                <span className="text-blue-600 cursor-pointer" onClick={() => handleCopy("Transport Nagar, Rewa")}><IoCopyOutline /></span>
                             </div>
                         </div>
 
