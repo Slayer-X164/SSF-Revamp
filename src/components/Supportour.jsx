@@ -1,13 +1,15 @@
 import Heart from "../assets/Heart.png";
 import QRcode from "../assets/QR.png";
 import { IoCopyOutline } from "react-icons/io5";
+import toast, { Toaster } from "react-hot-toast";
 function Supportour() {
     const handleCopy = (text) => {
         navigator.clipboard.writeText(text);
-        alert("Copied : "+text);
+        toast.success("Copied: " + text);
     };
     return (
         <div className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-4">
+            <Toaster position="top-center" />
             <div className="w-full  flex flex-col gap-4 justify-center items-center">
                 <div className="flex">
 
@@ -57,7 +59,8 @@ function Supportour() {
                             <span className="text-zinc-400">Bank Name</span>
                             <div className="flex items-center gap-2">
                                 <span className="text-zinc-600 font-medium">Union Bank Of India</span>
-                                <span className="text-blue-600 cursor-pointer" onClick={() => handleCopy("Union Bank Of India")}><IoCopyOutline /></span>
+                                <span className="text-blue-600 cursor-pointer" onClick={() => handleCopy("Union Bank Of India")}
+                                    ><IoCopyOutline /></span>
                             </div>
                         </div>
 

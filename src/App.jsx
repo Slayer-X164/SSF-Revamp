@@ -9,6 +9,7 @@ import Collabrations from "./pages/Collabrations";
 import Impactstories from "./components/ImpactStories";
 import ProgressSection from "./pages/ProgressSection";
 import Supportour from "./components/Supportour";
+import Footer from "./components/Dowsec";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
       <ProgressSection />
       {/* support Page */}
       <Supportour />
+      <Footer></Footer>
     </div>
   );
 };
