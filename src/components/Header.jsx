@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
+import { IoMdArrowDropdown } from "react-icons/io";
 import { motion } from "motion/react";
+
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [value, setValue] = useState(false);
 
   return (
     <div className="fixed top-0 left-0 right-0 z-20 flex justify-center  bg-white/60 backdrop-blur-lg border-b-2 border-neutral-200">
       <div className="w-6xl flex items-center justify-between h-20 px-4  xl:px-0">
-
         {/* Logo */}
         <a href="#home">
           <img src="logo.svg" alt="logo" className="w-12" />
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-10 text-lg uppercase font-semibold">
+        <ul className="hidden relative md:flex items-center gap-10 text-lg uppercase font-semibold">
           <li className="cursor-pointer hover:bg-gray-100 px-2 rounded">
             <a href="#home">Home</a>
           </li>
@@ -28,9 +30,45 @@ const Header = () => {
           <li className="cursor-pointer hover:bg-gray-100 px-2 rounded">
             <a href="#join-us">Join Us</a>
           </li>
-          <li className="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-2 rounded">
+          <li
+            onClick={() => {
+              setValue(!value);
+            }}
+            className="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-2 rounded"
+          >
             More <IoIosArrowDown />
           </li>
+          {/* More Drop down button */}
+          {value && (
+            <div className="absolute top-10 -right-20 bg-white text-zinc-900 drop-shadow-xl border border-zinc-300/70 rounded-xl">
+              <ul className="">
+                <li className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] rounded-tl-xl rounded-tr-xl transition-all ease-in-out duration-300">
+                  <img src="./images/money_box.png" alt="money box image" />
+                  <span>Donate & Support</span>
+                </li>
+
+                <li className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] transition-all ease-in-out duration-100">
+                  <img src="./images/blog.png" alt="blog image" />
+                  <span>Blog</span>
+                </li>
+
+                <li className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] transition-all ease-in-out duration-100">
+                  <img src="./images/gallery.png" alt="gallery image" />
+                  <span>Media Gallery</span>
+                </li>
+
+                <li className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] transition-all ease-in-out duration-100">
+                  <img src="./images/call.png" alt="contact image" />
+                  <span>Contact Us</span>
+                </li>
+
+                <li className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] rounded-bl-xl rounded-br-xl transition-all ease-in-out duration-100">
+                  <img src="./images/analyze.png" alt="analyze image" />
+                  <span>Terms & Conditions</span>
+                </li>
+              </ul>
+            </div>
+          )}
         </ul>
 
         {/* Desktop Donate Button */}
@@ -42,10 +80,7 @@ const Header = () => {
         </button>
 
         {/* Mobile Hamburger */}
-        <button
-          className="md:hidden text-3xl"
-          onClick={() => setOpen(!open)}
-        >
+        <button className="md:hidden text-3xl" onClick={() => setOpen(!open)}>
           {open ? <HiX /> : <HiOutlineMenu />}
         </button>
       </div>
@@ -53,17 +88,59 @@ const Header = () => {
       {/* Mobile Menu */}
       <div
         className={`md:hidden fixed top-20 left-0 w-full bg-white shadow-xl transition-all duration-300 ${
-          open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"
+          open
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-5 pointer-events-none"
         }`}
       >
         <ul className="flex flex-col items-start gap-4 p-6 text-lg uppercase font-semibold">
-          <li onClick={() => setOpen(false)}><a href="#home">Home</a></li>
-          <li onClick={() => setOpen(false)}><a href="#about-us">About Us</a></li>
-          <li onClick={() => setOpen(false)}><a href="#campaign">Campaign</a></li>
-          <li onClick={() => setOpen(false)}><a href="#join-us">Join Us</a></li>
-          <li className="flex items-center gap-1">
-            More <IoIosArrowDown />
+          <li onClick={() => setOpen(false)}>
+            <a href="#home">Home</a>
           </li>
+          <li onClick={() => setOpen(false)}>
+            <a href="#about-us">About Us</a>
+          </li>
+          <li onClick={() => setOpen(false)}>
+            <a href="#campaign">Campaign</a>
+          </li>
+          <li onClick={() => setOpen(false)}>
+            <a href="#join-us">Join Us</a>
+          </li>
+          <li onClick={() => setValue(!value)} className="flex items-center gap-1">
+            More <IoIosArrowDown className={`${ value ? "rotate-180" : "duration-300 transition-all ease"}`} />
+          </li>
+
+          {value && 
+          <div className="text-zinc-900 w-full">
+              <ul className="space-y-3 w-full">
+                <li className="flex gap-4 items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-1 py-3 w-full cursor-pointer">
+                  <img src="./images/money_box.png" alt="money box image" />
+                  <span>Donate & Support</span>
+                </li>
+
+                <li className="flex gap-4 items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-1 py-3 w-full cursor-pointer">
+                  <img src="./images/blog.png" alt="blog image" />
+                  <span>Blog</span>
+                </li>
+
+                <li className="flex gap-4 items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-1 py-3 w-full cursor-pointer">
+                  <img src="./images/gallery.png" alt="gallery image" />
+                  <span>Media Gallery</span>
+                </li>
+
+                <li className="flex gap-4 items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-1 py-3 w-full cursor-pointer">
+                  <img src="./images/call.png" alt="contact image" />
+                  <span>Contact Us</span>
+                </li>
+
+                <li className="flex gap-4 items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-1 py-3 w-full cursor-pointer">
+                  <img src="./images/analyze.png" alt="analyze image" />
+                  <span>Terms & Conditions</span>
+                </li>
+              </ul>
+            </div>
+          
+          }
 
           <button className="mt-4 w-full px-4 py-2 bg-[#005EFF] text-white hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
             <a href="#">
