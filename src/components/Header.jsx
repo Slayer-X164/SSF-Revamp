@@ -110,36 +110,36 @@ const Header = () => {
             More <IoIosArrowDown className={`${ value ? "rotate-180" : "duration-300 transition-all ease"}`} />
           </li>
 
-          {value && 
+          {value &&
           <div className="text-zinc-900 w-full">
               <ul className="space-y-3 w-full">
-                <li className="flex gap-4 items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-1 py-3 w-full cursor-pointer">
-                  <img src="./images/money_box.png" alt="money box image" />
+                <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1 w-full cursor-pointer">
+                  <img src="./images/money_box.png" alt="money box image" className="w-6" />
                   <span>Donate & Support</span>
                 </li>
 
-                <li className="flex gap-4 items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-1 py-3 w-full cursor-pointer">
-                  <img src="./images/blog.png" alt="blog image" />
+                <li className="flex  gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1 w-full cursor-pointer">
+                  <img src="./images/blog.png" alt="blog image" className="w-6" />
                   <span>Blog</span>
                 </li>
 
-                <li className="flex gap-4 items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-1 py-3 w-full cursor-pointer">
-                  <img src="./images/gallery.png" alt="gallery image" />
+                <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1 w-full cursor-pointer">
+                  <img src="./images/gallery.png" alt="gallery image"  className="w-6"/>
                   <span>Media Gallery</span>
                 </li>
 
-                <li className="flex gap-4 items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-1 py-3 w-full cursor-pointer">
-                  <img src="./images/call.png" alt="contact image" />
+                <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1 w-full cursor-pointer">
+                  <img src="./images/call.png" alt="contact image" className="w-6" />
                   <span>Contact Us</span>
                 </li>
 
-                <li className="flex gap-4 items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-1 py-3 w-full cursor-pointer">
-                  <img src="./images/analyze.png" alt="analyze image" />
+                <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1 w-full cursor-pointer">
+                  <img src="./images/analyze.png" alt="analyze image" className="w-6" />
                   <span>Terms & Conditions</span>
                 </li>
               </ul>
             </div>
-          
+
           }
 
           <button className="mt-4 w-full px-4 py-2 bg-[#005EFF] text-white hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
