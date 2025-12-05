@@ -3,12 +3,14 @@ import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { motion } from "motion/react";
-import { Link } from "react-router";
+import { Link, Links } from "react-router";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(false);
-
+  const closeWhenClicked = ()=>{
+    setOpen(false)
+  }
   return (
     <div className="fixed top-0 left-0 right-0 z-20 flex justify-center  bg-white/60 backdrop-blur-lg border-b-2 border-neutral-200">
       <div className="w-6xl flex items-center justify-between h-20 px-4  xl:px-0">
@@ -44,30 +46,30 @@ const Header = () => {
           {value && (
             <div className="absolute top-10 -right-20 bg-white text-zinc-900 drop-shadow-xl border border-zinc-300/70 rounded-xl">
               <ul className="">
-                <li className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] rounded-tl-xl rounded-tr-xl transition-all ease-in-out duration-300">
+                <Link onClick={closeWhenClicked} to={'/DonateAndSupport'} className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] rounded-tl-xl rounded-tr-xl transition-all ease-in-out duration-300">
                   <img src="./images/money_box.png" alt="money box image" />
                   <span>Donate & Support</span>
-                </li>
+                </Link>
 
-                <li className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] transition-all ease-in-out duration-100">
+                <Link onClick={closeWhenClicked} to={'/Blog'} className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] transition-all ease-in-out duration-100">
                   <img src="./images/blog.png" alt="blog image" />
                   <span>Blog</span>
-                </li>
+                </Link>
 
-                <li className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] transition-all ease-in-out duration-100">
+                <Link onClick={closeWhenClicked} to={'/Media'} className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] transition-all ease-in-out duration-100">
                   <img src="./images/gallery.png" alt="gallery image" />
                   <span>Media Gallery</span>
-                </li>
+                </Link>
 
-                <li className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] transition-all ease-in-out duration-100">
+                <Link onClick={closeWhenClicked} to={'/Contact'} className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] transition-all ease-in-out duration-100">
                   <img src="./images/call.png" alt="contact image" />
                   <span>Contact Us</span>
-                </li>
+                </Link>
 
-                <li className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] rounded-bl-xl rounded-br-xl transition-all ease-in-out duration-100">
+                <Link onClick={closeWhenClicked} to={'/Terms'} className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] rounded-bl-xl rounded-br-xl transition-all ease-in-out duration-100">
                   <img src="./images/analyze.png" alt="analyze image" />
                   <span>Terms & Conditions</span>
-                </li>
+                </Link>
               </ul>
             </div>
           )}
@@ -107,11 +109,11 @@ const Header = () => {
             <Link to={'/Campaign'}>Campaign</Link>
           </li>
 
-        
+
           <li onClick={() => setOpen(false)}>
             <a href="#join-us">join us</a>
           </li>
-        
+
         <li onClick={() => setValue(!value)} className="flex items-center gap-1">
           More <IoIosArrowDown />
         </li>
@@ -119,50 +121,50 @@ const Header = () => {
         {value && (
           <div className="text-zinc-900 w-full">
             <ul className="space-y-3 w-full">
-              <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+              <Link onClick={closeWhenClicked} to={'/DonateAndSupport'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
                 <img
                   src="./images/money_box.png"
                   alt="money box image"
                   className="w-6"
                 />
                 <span>Donate & Support</span>
-              </li>
+              </Link>
 
-              <li className="flex  gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+              <Link onClick={closeWhenClicked} to={'/Blog'} className="flex  gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
                 <img
                   src="./images/blog.png"
                   alt="blog image"
                   className="w-6"
                 />
                 <span>Blog</span>
-              </li>
+              </Link>
 
-              <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+              <Link onClick={closeWhenClicked} to={'/Media'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
                 <img
                   src="./images/gallery.png"
                   alt="gallery image"
                   className="w-6"
                 />
                 <span>Media Gallery</span>
-              </li>
+              </Link>
 
-              <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+              <Link onClick={closeWhenClicked} to={'/Contact'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
                 <img
                   src="./images/call.png"
                   alt="contact image"
                   className="w-6"
                 />
                 <span>Contact Us</span>
-              </li>
+              </Link>
 
-              <li className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+              <Link onClick={closeWhenClicked} to={'/Terms'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
                 <img
                   src="./images/analyze.png"
                   alt="analyze image"
                   className="w-6"
                 />
                 <span>Terms & Conditions</span>
-              </li>
+              </Link>
             </ul>
           </div>
         )}

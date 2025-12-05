@@ -16,6 +16,7 @@ import Supportour from "./components/Supportour";
 import FAQSection from "./pages/FAQSection";
 import ScrollToTop from "./components/Scrolltotop";
 import AbtDetailed from "./components/AboutDetailed";
+import DonateAndSupport from "./pages/DonateAndSupport";
 
 const App = () => {
   return (
@@ -54,6 +55,16 @@ const App = () => {
               <FooterSection />
             </>
           }
+        />
+        {/* donate and support */}
+        <Route
+        path="/DonateAndSupport"
+        element={
+          <>
+          <DonateAndSupport/>
+          <FooterSection/>
+          </>
+        }
         />
       </Routes>
     </div>
