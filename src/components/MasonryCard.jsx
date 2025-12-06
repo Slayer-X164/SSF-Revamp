@@ -17,7 +17,7 @@ export default function MasonryCards() {
           border
         "
       >
-        <div className="card w-full drop-shadow-lg border-2 border-zinc-100 bg-linear-to-tl from-white from-80% to-yellow-200 shadow-[6px_6px_0px_#000] flex flex-col lg:flex-row items-center justify-between gap-2 p-4 h-full py-8 lg:py-0">
+        <div className="card w-full drop-shadow-lg border-2 border-zinc-100 bg-gradient-to-tr from-[#33ccff] to-[#ff99cc] shadow-[6px_6px_0px_#000] flex flex-col lg:flex-row items-center justify-between gap-2 p-4 h-full py-8 lg:py-0">
           <div className="lg:w-[60%] space-y-4">
             <h4 className="text-2xl sm:text-4xl  font-bold">Education & Skills</h4>
             <p className="text-zinc-600 font-medium">
