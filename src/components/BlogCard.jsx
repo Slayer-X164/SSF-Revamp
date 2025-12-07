@@ -7,12 +7,11 @@ export default function BlogCard({ post }) {
         className="w-full h-48 object-cover rounded-lg"
       />
 
-      <h2 className="text-xl font-semibold mt-3">
-        {post.title}
-      </h2>
+      <h2 className="text-xl font-semibold mt-3">{post.title}</h2>
 
       <p className="text-gray-600 text-sm mt-2 line-clamp-3">
-        {post.summary || post.content.replace(/<[^>]+>/g, "").slice(0, 120) + "..."}
+        {post.summary ||
+          post.content?.replace(/<[^>]+>/g, "").slice(0, 120) + "..."}
       </p>
 
       <a
