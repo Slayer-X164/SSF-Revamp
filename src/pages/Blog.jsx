@@ -94,7 +94,7 @@ export default function Blog() {
           <BlogCard key={post.id} post={post} big />
         ))}
       </div>
-      <div className="w-full bg-blue-400 pb-30 mt-10 pt-15">
+      <div className="w-full bg-blue-400 pb-30 mt-10 pt-15 overflow-hidden">
         <p className="text-lg font-bold w-full ml-6 md:ml-6 lg:ml-40 pb-8">Read All Other Blogs</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6 md:px-6 lg:px-40 ">
           {sortedPosts.slice(2).map((post) => (
@@ -112,7 +112,7 @@ function BlogCard({ post, big }) {
 
   return (
     <div
-      className={`bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border ${big ? "h-auto" : ""
+      className={`bg-white shadow-[4px_4px_0px_#665e5e] hover:shadow-[6px_6px_0px_#808080] transition-all duration-300 overflow-hidden border ${big ? "h-auto" : ""
         }`}
     >
       {image ? (
