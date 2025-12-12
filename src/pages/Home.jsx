@@ -5,6 +5,7 @@ import approvedImgIcon from "../assets/approved-icon.png";
 import { easeIn, easeInOut, easeOut, motion as MotionLib, transform } from "motion/react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
+import SquigglyLine from "../components/SquigglyLine";
 export default function Home() {
   const parent = {
     show: {
@@ -69,7 +70,8 @@ export default function Home() {
 
     useEffect(() => {
       const controls = animate(motionValue, value, {
-        duration: 3, // 2 seconds animation
+        duration: 3,
+        delay:1,
         onUpdate: (latest) => setCount(Math.floor(latest)),
       });
 
@@ -103,19 +105,18 @@ export default function Home() {
 
                 <motion.span variants={child}>Donate For Better</motion.span>
 
-                <div className="relative w-fit mx-auto lg:mx-0 inline-block">
+                <div className="relative w-fit mx-auto lg:mx-0 inline-block ">
                   <motion.h1
                     variants={child}
-                    className="font-black tracking-tight text-black text-5xl sm:text-6xl lg:text-7xl relative z-10"
+                    className="font-black tracking-tight text-black text-5xl sm:text-6xl lg:text-7xl relative z-10 "
                   >
                     TOMORROW
+
                   </motion.h1>
-                  <motion.img
-                    variants={child}
-                    src="/underline.svg"
-                    alt="line"
-                    className="absolute -bottom-2 left-0 w-full -translate-y-1/2"
-                  />
+                  <motion.div variants={child} className="w-full absolute -bottom-3">
+<SquigglyLine />
+                  </motion.div>
+
                 </div>
               </motion.h1>
 
