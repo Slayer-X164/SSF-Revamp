@@ -62,3 +62,14 @@
 
 
     </div>
+
+
+
+    <motion.span variants={child}>
+                  Emppower{" "}
+                  <motion.span
+                    variants={child}
+                    className="ml-2">
+                    <WordAni></WordAni>
+                  </motion.span>
+                </motion.span>

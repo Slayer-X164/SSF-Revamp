@@ -5,6 +5,7 @@ import approvedImgIcon from "../assets/approved-icon.png";
 import { easeIn, easeInOut, easeOut, motion as MotionLib, transform } from "motion/react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
+import WordAni from "../components/wordAn";
 export default function Home() {
   const parent = {
     show: {
@@ -91,13 +92,15 @@ export default function Home() {
                 animate={"show"}
                 className="uppercase flex flex-col font-bold text-4xl sm:text-5xl lg:text-6xl space-y-4 tracking-tight leading-[100%]"
               >
-                <motion.span variants={child}>
-                  Emppower{" "}
-                  <motion.span
-                    variants={child}
-                    className="capitalize bg-blue-500 text-white px-4 py-1"
-                  >
-                    Change
+                <motion.span
+                  variants={child}
+                  className="flex flex-row flex-wrap items-center gap-2 
+             text-center lg:text-left justify-center lg:justify-start"
+                >
+                  <span>Empower</span>
+
+                  <motion.span variants={child} className="inline-block">
+                    <WordAni />
                   </motion.span>
                 </motion.span>
 

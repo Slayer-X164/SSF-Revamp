@@ -18,6 +18,7 @@
     "@tanstack/react-router": "^1.140.1",
     "@tanstack/router-plugin": "^1.140.1",
     "framer-motion": "^12.23.24",
+    "gsap": "^3.14.1",
     "lucide-react": "^0.556.0",
     "motion": "^12.23.24",
     "react": "^19.2.0",
