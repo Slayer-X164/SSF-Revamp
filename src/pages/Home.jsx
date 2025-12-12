@@ -2,7 +2,9 @@ import childrenImg from "../assets/childrens.svg";
 import peopleImgIcon from "../assets/People.png";
 import trustImgIcon from "../assets/Trust.png";
 import approvedImgIcon from "../assets/approved-icon.png";
-import { easeIn, easeInOut, easeOut, motion, transform } from "motion/react";
+import { easeIn, easeInOut, easeOut, motion as MotionLib, transform } from "motion/react";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect, useState } from "react";
 export default function Home() {
   const parent = {
     show: {
@@ -51,16 +53,31 @@ export default function Home() {
     },
   };
   const reveal = {
-  hidden: { opacity: 0, clipPath: "inset(0 0 100% 0)" },
-  show: {
-    opacity: 1,
-    clipPath: "inset(0 0 0% 0)",
-    transition: {
-      duration: 1,
-      ease: [0.25, 0.1, 0.25, 1], // cubic-bezier
+    hidden: { opacity: 0, clipPath: "inset(0 0 100% 0)" },
+    show: {
+      opacity: 1,
+      clipPath: "inset(0 0 0% 0)",
+      transition: {
+        duration: 1,
+        ease: [0.25, 0.1, 0.25, 1], // cubic-bezier
+      },
     },
-  },
-};
+  };
+  function AnimatedCounter({ value }) {
+    const motionValue = useMotionValue(0);
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+      const controls = animate(motionValue, value, {
+        duration: 3, // 2 seconds animation
+        onUpdate: (latest) => setCount(Math.floor(latest)),
+      });
+
+      return () => controls.stop();
+    }, [value]);
+
+    return <span>{count.toLocaleString()}</span>; // formats 50000 → 50,000
+  }
 
   return (
     <div className="relative w-full min-h-screen bg-[url(./assets/grid.svg)] bg-contain bg-center px-4">
@@ -164,7 +181,9 @@ export default function Home() {
             >
               <img src={peopleImgIcon} className="w-10" alt="" />
               <div>
-                <p className="text-3xl font-black text-blue-700">50,000</p>
+                <p className="text-3xl font-black text-blue-700">
+                  <AnimatedCounter value={50000} />
+                </p>
                 <p className="font-medium text-lg">Lives Impacted</p>
               </div>
             </motion.div>
@@ -175,7 +194,9 @@ export default function Home() {
             >
               <img src={trustImgIcon} className="w-10" alt="" />
               <div>
-                <p className="text-3xl font-black text-blue-700">15,000</p>
+                <p className="text-3xl font-black text-blue-700">
+                  <AnimatedCounter value={15000} />
+                </p>
                 <p className="font-medium text-lg">Beneficiaries</p>
               </div>
             </motion.div>
@@ -186,7 +207,9 @@ export default function Home() {
             >
               <img src={approvedImgIcon} className="w-10" alt="" />
               <div>
-                <p className="text-3xl font-black text-blue-700">100+</p>
+                <p className="text-3xl font-black text-blue-700">
+                  <AnimatedCounter value={100} />
+                </p>
                 <p className="font-medium text-lg">Programs Conducted</p>
               </div>
             </motion.div>

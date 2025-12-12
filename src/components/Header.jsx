@@ -66,7 +66,7 @@ const Header = () => {
                   <span>Contact Us</span>
                 </Link>
 
-                <Link onClick={closeWhenClicked} to={'/Terms'} className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] rounded-bl-xl rounded-br-xl transition-all ease-in-out duration-100">
+                <Link onClick={closeWhenClicked} to={'/TermsAndCondition'} className="flex gap-4 items-center border-b border-zinc-200/90 p-4 cursor-pointer hover:bg-[#f5f5f5] rounded-bl-xl rounded-br-xl transition-all ease-in-out duration-100">
                   <img src="./images/analyze.png" alt="analyze image" />
                   <span>Terms & Conditions</span>
                 </Link>

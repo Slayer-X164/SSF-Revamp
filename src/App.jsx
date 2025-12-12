@@ -15,11 +15,12 @@ import ProgressSection from "./pages/ProgressSection";
 import Supportour from "./components/Supportour";
 import FAQSection from "./pages/FAQSection";
 import ScrollToTop from "./components/Scrolltotop";
-import AbtDetailed from "./components/AboutDetailed";
+import AbtDetailed from "./pages/AboutDetailed";
 import DonateAndSupport from "./pages/DonateAndSupport";
 import Blog from "./pages/Blog";
 import MediaGallery from "./pages/MediaGallery";
 import Contact from "./pages/Contact";
+import TermsAndCondition from "./pages/TermsAndCondtion";
 
 const App = () => {
   return (
@@ -98,6 +99,17 @@ const App = () => {
           <FooterSection/>
           </>
         }
+
+        />
+        <Route
+        path="/TermsAndCondition"
+        element={
+          <>
+          <TermsAndCondition />
+          <FooterSection/>
+          </>
+        }
+        
         />
       </Routes>
     </div>
