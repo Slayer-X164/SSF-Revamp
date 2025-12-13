@@ -21,6 +21,7 @@ import Blog from "./pages/Blog";
 import MediaGallery from "./pages/MediaGallery";
 import Contact from "./pages/Contact";
 import TermsAndCondition from "./pages/TermsAndCondtion";
+import Volunteer from "./pages/Volunteer";
 
 const App = () => {
   return (
@@ -106,6 +107,17 @@ const App = () => {
         element={
           <>
           <TermsAndCondition />
+          <FooterSection/>
+          </>
+        }
+        
+        />
+
+        <Route
+        path="/volunteer"
+        element={
+          <>
+          <Volunteer />
           <FooterSection/>
           </>
         }

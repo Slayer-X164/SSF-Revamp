@@ -1,102 +1,91 @@
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router";
 
-function Getinvolved() {
+const GetInvolved = () => {
   return (
-    <div id="join-us" className="min-h-screen w-full flex flex-col items-center py-6 px-4">
-      {/* Heading */}
-      <h1 className="text-3xl md:text-4xl font-semibold italic mt-10 text-center">
-        Get Involved - Swastik Srijan Foundation
-      </h1>
+    <div id="join-us" className="w-full min-h-screen flex items-center justify-center py-10 px-4">
+      <div className="w-full max-w-6xl min-h-96 mx-auto space-y-10">
 
-      <p className="mt-3 text-zinc-500 font-semibold text-center text-sm md:text-base">
-        Join us to create impact in education, health, woman empowerment,
-        <br className="hidden md:block" />
-        environment and more
-      </p>
+        <div className="text-center space-y-2 flex items-center justify-center flex-col">
+          <h1 className="font-black text-4xl italic">Get Involved - Swastik Srijan Foundation</h1>
+          <p className="max-w-130 font-bold text-zinc-500">join us to create impact in education , health, woman empowerment, environment and more</p>
+        </div>
 
-      {/* GRID RESPONSIVE */}
-      <div className="mt-10 w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
-
-        {[
-          {
-            title: "Volunteer",
-            color: "bg-blue-200",
-            tags: ["Community work", "Teaching", "Awareness Drives"],
-          },
-          {
-            title: "Member",
-            color: "bg-purple-200",
-            tags: ["Membership Benefit", "Network", "Impact Reports"],
-          },
-          {
-            title: "Donor/Supporter",
-            color: "bg-red-200",
-            tags: ["One-Time", "Monthly Supports", "Awareness Drives"],
-          },
-          {
-            title: "Partnership",
-            color: "bg-green-200",
-            tags: ["Brand Collaboration", "Join Events", "Awareness Drives"],
-          },
-          {
-            title: "Collaboration",
-            color: "bg-orange-200",
-            tags: ["Join Campaigns", "Co-Initiatives", "Awareness Program"],
-          },
-          {
-            title: "Career/Internship",
-            color: "bg-pink-200",
-            tags: ["Internships", "Career Growth", "Skill Building"],
-          },
-        ].map((item, i) => (
-          <div
-            key={i}
-            className={`${item.color} w-full max-w-[290px] shadow-[6px_6px_0px_#000] rounded-sm`}
-          >
-            {/* Inner Card */}
-            <div className="bg-white m-2 p-3 rounded-sm">
-              <h1 className="font-bold text-2xl md:text-3xl pb-3">
-                {item.title}
-              </h1>
-
-              <p className="font-semibold text-zinc-400">
-                {item.title === "Volunteer" &&
-                  "Contribute your time and passion to make a difference"}
-                {item.title === "Member" &&
-                  "Join our growing family and be part of lasting change"}
-                {item.title === "Donor/Supporter" &&
-                  "Fuel our mission with your generous contribution"}
-                {item.title === "Partnership" &&
-                  "Collaborate with us to create a social impact through CSR program"}
-                {item.title === "Collaboration" &&
-                  "Let's work together to expand and amplify change"}
-                {item.title === "Career/Internship" &&
-                  "Learn, grow, and create impact with purpose-driven work"}
-              </p>
-
-              {/* Tags */}
-              <div className="mt-4 flex flex-wrap gap-2">
-                {item.tags.map((tag, t) => (
-                  <span
-                    key={t}
-                    className={`${item.color} text-[14px] p-1 px-2 inline-block rounded-sm`}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+        <div className="w-full bg-[#ECF9FF] flex items-center flex-col-reverse md:flex-row gap-10 p-6 rounded-2xl">
+          <div className="f_content flex flex-col gap-4 justify-around w-full md:w-1/2">
+            <h3 className="text-3xl font-black">Volunteer</h3>
+            <p className="max-w-[380px] text-zinc-500 tracking-wide font-bold">Contribute your time and passion to make a difference. Work directly with communities and see your impact firsthand.</p>
+            <div className="flex items-center flex-wrap gap-4 max-w-[300px]">
+              <span className="bg-[#A7E1FF] py-1 px-4 rounded-md">Community Work</span>
+              <span className="bg-[#A7E1FF] py-1 px-4 rounded-md">Teaching</span>
+              <span className="bg-[#A7E1FF] py-1 px-4 rounded-md">Awareness Drives</span>
             </div>
+            <Link to="/volunteer" className="bg-[#005DFF] text-white drop-shadow-md drop-shadow-white font-bold text-xl px-4 py-3 flex items-center justify-center gap-2 rounded-xl cursor-pointer active:scale-95 duration-200 transition-all ease">
+              <span>Explore</span> 
+              <FaArrowRightLong />
+            </Link>
+          </div>
+          <div className="s_content w-full md:w-1/2">
+            <img src="./images/volunteers.png" alt="" />
+          </div>
+        </div>
 
-            {/* Button */}
-            <button className="font-semibold flex  items-center gap-2 ml-5 my-3 transition-transform duration-500 hover:scale-110">
-              <a className="text-lg" href="#">Explore</a>
-              <FaArrowRightLong/>
+        <div className="w-full bg-[#FFEDDC] grid grid-cols-1 md:grid-cols-2 gap-10 p-6 rounded-2xl">
+          <div className="f_content">
+            <img src="./images/members.png" alt="" />
+          </div>
+          <div className="s_content flex flex-col gap-4 justify-around">
+            <h3 className="text-3xl font-black">Member</h3>
+            <p className="max-w-[380px] text-zinc-500 tracking-wide font-bold">Join our growing family and be part of lasting change . As a member, you help sustain long-term projects and empower communities.</p>
+            <div className="flex items-center flex-wrap gap-4 max-w-[300px]">
+              <span className="bg-[#FFC898] py-1 px-4 rounded-md">Membership Benefit</span>
+              <span className="bg-[#FFC898] py-1 px-4 rounded-md">Network</span>
+              <span className="bg-[#FFC898] py-1 px-4 rounded-md">Impact Reports</span>
+            </div>
+            <button className="bg-[#FB7C1B] hover:bg-[#f7842c] drop-shadow-md drop-shadow-white text-white font-bold text-xl px-4 py-3 flex items-center justify-center gap-2 rounded-xl cursor-pointer active:scale-95 duration-200 transition-all ease">
+              <span>Explore</span> 
+              <FaArrowRightLong />
             </button>
           </div>
-        ))}
+          
+        </div>
+
+        <div className="w-full bg-[#E7FFF4] p-6 rounded-2xl grid grid-cols-1 gap-10">
+          <div className="f_content">
+            <img src="./images/learningHub.png" alt="" />
+          </div>
+          <div className="s_content flex flex-col items-center gap-4 justify-center text-center space-y-2">
+            <h3 className="text-3xl font-black">SSF Learning Hub</h3>
+            <p className="max-w-[660px] text-zinc-500 tracking-wide font-bold">Your trusted hub for free support and services, dedicated to empowering individuals and communities.  We believe that knowledge and resources should be accessible to everyone, regardless of background. Our mission is to make knowledge and resources accessible to everyone</p>
+            <div className="flex items-center flex-wrap gap-4 justify-center">
+              <span className="bg-[#72FABC] py-1 px-4 rounded-md">Free Resources</span>
+              <span className="bg-[#72FABC] py-1 px-4 rounded-md">Skill Building</span>
+              <span className="bg-[#72FABC] py-1 px-4 rounded-md">Workshops</span>
+            </div>
+            <button className="bg-[#029D56] hover:bg-[#05b163] mt-2 text-white w-full font-bold text-xl px-4 py-3 flex items-center justify-center gap-2 rounded-xl cursor-pointer active:scale-95 duration-200 transition-all ease">
+              <span>Explore</span> 
+              <FaArrowRightLong />
+            </button>
+          </div>
+          
+        </div>
+
+        <div className="w-full p-6 rounded-2xl flex items-center justify-center">
+          <div className="content space-y-6 text-center flex flex-col items-center justify-center">
+            <h2 className="text-4xl italic font-black">Want to do more ?</h2>
+            <div className="">
+              <img src="./images/cpi_group.svg" alt="" />
+            </div>
+            <button className="bg-[#FFD609] hover:bg-[#FFD609] mt-6 text-zinc-800 font-bold text-xl px-8 border-2 border-zinc-600/60 py-3 flex items-center justify-center gap-2 rounded-xl cursor-pointer active:scale-95 duration-200 transition-all ease">
+              <span>Apply Now</span> 
+              <FaArrowRightLong />
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
-  );
+  )
 }
 
-export default Getinvolved;
+export default GetInvolved
