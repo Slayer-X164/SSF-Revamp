@@ -135,7 +135,7 @@ export default function Home() {
 
               <div className="btns space-x-5 flex justify-center lg:justify-start z-10 relative">
                 <button className="px-4 py-2 bg-[#005EFF] text-white hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
-                  <a href="#">
+                  <a href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view" target="_blank">
                     Donate Now
                     <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
                   </a>

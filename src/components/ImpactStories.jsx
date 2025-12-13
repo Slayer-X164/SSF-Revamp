@@ -26,7 +26,9 @@ function Impactstories() {
               Provided essential supplies and food kits to hundreds of families
               and migrant workers during the COVID-19 lockdown across India.
             </p>
-            <button className="bg-black text-white text-center w-full p-2 mt-4">
+            <button className="bg-black text-white text-center w-full p-2 mt-4 hover:bg-white hover:text-black hover:border-2 transition-all duration-300 hover:rounded-4xl" onClick={() =>
+              window.open("https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view", "_blank")
+            }>
               Donate Now
             </button>
           </div>
@@ -42,7 +44,9 @@ function Impactstories() {
               SSF Learning Hub offers free online and offline learning to
               children and youth, empowering access to education across India.
             </p>
-            <button className="bg-black text-white text-center w-full p-2 mt-4">
+            <button className="bg-black text-white text-center w-full p-2 mt-4 hover:bg-white hover:text-black hover:border-2 transition-all duration-300 hover:rounded-4xl" onClick={() =>
+              window.open("https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view", "_blank")
+            }>
               Donate Now
             </button>
           </div>
@@ -58,7 +62,9 @@ function Impactstories() {
               A nationwide campaign to plant trees and promote environmental
               awareness among communities and schools.
             </p>
-            <button className="bg-black text-white text-center w-full p-2 mt-4">
+            <button className="bg-black text-white text-center w-full p-2 mt-4 hover:bg-white hover:text-black hover:border-2 transition-all duration-300 hover:rounded-4xl" onClick={() =>
+              window.open("https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view", "_blank")
+            }>
               Donate Now
             </button>
           </div>

@@ -54,7 +54,9 @@ const DonateAndSupport = () => {
         {/* Donate Button with dotted line */}
         <div className="relative w-full min-h-20 my-6 px-3 flex items-center justify-center">
           <img src="./images/dotted_line.png" alt="" />
-          <button className="absolute text-white bg-[#005EFF] px-30 py-4  cursor-pointer active:scale-95 shadow-[5px_5px_0px_#333] hover:bg-black hover:shadow-[0px_0px_0px_#fff] duration-300 transition-all ease-in-out text-xl md:text-2xl tracking-wide font-bold">Donate</button>
+          <button className="absolute text-white bg-[#005EFF] px-30 py-4  cursor-pointer active:scale-95 shadow-[5px_5px_0px_#333] hover:bg-black hover:shadow-[0px_0px_0px_#fff] duration-300 transition-all ease-in-out text-xl md:text-2xl tracking-wide font-bold" onClick={() =>
+            window.open("https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view", "_blank")
+          }>Donate</button>
         </div>
 
       </div>
