@@ -157,7 +157,7 @@ const Header = () => {
                 <span>Contact Us</span>
               </Link>
 
-              <Link onClick={closeWhenClicked} to={'/Terms'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
+              <Link onClick={closeWhenClicked} to={'/TermsAndCondition'} className="flex gap-4  items-center bg-[#F1EFEF] hover:bg-blue-50 transition-all ease-in-out duration-300 px-3 text-sm py-1.5 w-full cursor-pointer">
                 <img
                   src="./images/analyze.png"
                   alt="analyze image"

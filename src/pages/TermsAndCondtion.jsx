@@ -92,11 +92,11 @@ function TermsAndCondition() {
 
                 <div className="flex flex-col space-y-2">
                     <p className="text-2xl font-extrabold m-0"><span className="text-sm">9.</span> Contact Information</p>
-                    <p className="m-0">
+                    <div className="m-0">
                         For queries or concerns related to these Terms & Conditions, you may contact us at:
-                        <p>Mobile: 9718346691</p>
-                        <p>Email: swastiksrijanfoundation@gmail.com</p>
-                    </p>
+                        <h3>Mobile: 9718346691</h3>
+                        <h3>Email: swastiksrijanfoundation@gmail.com</h3>
+                    </div>
                 </div>
 
                 <div className="flex flex-col space-y-2 pb-10">
