@@ -119,31 +119,26 @@ const Header = () => {
               </ul>
             </div>
           )}
-
         </ul>
         {/* buttons */}
-        <div className="  gap-3 items-center justify-center hidden md:flex">
-            <a href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view" target="_blank">
-                <button className="px-6 w-full py-2 bg-[#005EFF] text-white hover:bg-black font-medium text-lg relative group transition-all duration-200 ease-in cursor-pointer">
-
-                    Donate
-                    <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
-
-                </button>
-                 </a>
-                 <Link to='/Volunteer' onClick={closeAll}>
-                   <button>
+        <div className="  gap-4 items-center justify-center hidden md:flex">
           <a
             href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view"
             target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-block px-5 py-2 border-2 border-yellow-300 hover:border-0 bg-white text-zinc-600 hover:text-yellow-300 hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer"
           >
-            Apply
-            <span className="absolute inset-0 bg-white border-2 border-black translate-x-1.5 translate-y-1.5 -z-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 ease-in"></span>
+            <button className="px-6 w-full py-2 bg-[#005EFF] text-white hover:bg-black font-medium text-lg relative group transition-all duration-200 ease-in cursor-pointer">
+              Donate
+              <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
+            </button>
           </a>
-          </button></Link>
-          </div>
+          <Link to="/Volunteer" onClick={closeAll}>
+            <button className="hidden md:inline-block px-5 py-2 border-2 border-yellow-400 hover:border-transparent bg-white text-zinc-900 hover:text-yellow-300 hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
+
+                Apply
+                <span className="absolute inset-0 bg-white border-2 border-black translate-x-1.5 translate-y-1.5 -z-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 ease-in"></span>
+            </button>
+          </Link>
+        </div>
 
         {/* Mobile Toggle */}
         <button className="md:hidden text-3xl" onClick={() => setOpen(!open)}>
@@ -225,21 +220,22 @@ const Header = () => {
             </>
           )}
           <div className="pt-4 flex flex-col gap-3 w-full">
-            <a href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view" target="_blank">
-                <button className="px-4 w-full py-2 bg-[#005EFF] text-white hover:bg-black font-medium text-lg relative group transition-all duration-200 ease-in cursor-pointer">
+            <a
+              href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view"
+              target="_blank"
+            >
+              <button className="px-4 w-full py-2 bg-[#005EFF] text-white hover:bg-black font-medium text-lg relative group transition-all duration-200 ease-in cursor-pointer">
+                Donate Now
+                <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
+              </button>
+            </a>
+            <Link to="/Volunteer" onClick={closeAll}>
+            <button className="w-full inline-block px-5 py-2 border-2 border-yellow-400 hover:border-transparent bg-white text-zinc-900 hover:text-yellow-300 hover:bg-black font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
 
-                    Donate Now
-                    <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
-
-                </button>
-                 </a>
-                 <Link to='/Volunteer' onClick={closeAll}>
-                  <button className="px-4 py-2 w-full bg-yellow-300 text-zinc-900 hover:bg-black hover:text-white font-semibold text-lg relative group transition-all duration-200 ease-in cursor-pointer">
-
-                    Join As Volunteer
-                    <span className="absolute group-hover:translate-x-0 group-hover:translate-y-0 inset-0 bg-black translate-x-1.5 translate-y-1.5 -z-1 transition-all duration-200 ease-in"></span>
-
-                </button></Link>
+                Apply
+                <span className="absolute inset-0 bg-white border-2 border-black translate-x-1.5 translate-y-1.5 -z-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 ease-in"></span>
+            </button>
+          </Link>
           </div>
         </ul>
       </div>
