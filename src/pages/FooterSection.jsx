@@ -1,3 +1,11 @@
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaLinkedinIn,
+} from "react-icons/fa";
+import { Link } from "@tanstack/react-router";
+import { FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className="relative w-full min-h-screen px-4 py-10 overflow-hidden">
@@ -34,54 +42,60 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div className="w-full lg:w-fit">
-              <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+              <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
               <ul className="space-y-2">
-                <li>
-                  <a
-                    href="#home"
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#about"
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#campaigns"
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    Campaigns
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#join"
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    Join Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#donate"
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    Donate
-                  </a>
-                </li>
-              </ul>
+  <li>
+    <Link
+      to="/"
+      className="text-gray-300 hover:text-white transition-colors text-sm"
+    >
+      Home
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      to="/"
+      hash="about"
+      className="text-gray-300 hover:text-white transition-colors text-sm"
+    >
+      About Us
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      to="/Campaign"
+      className="text-gray-300 hover:text-white transition-colors text-sm"
+    >
+      Campaign
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      to="/"
+      hash="join-us"
+      className="text-gray-300 hover:text-white transition-colors text-sm"
+    >
+      Join Us
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      to="/DonateAndSupport"
+      className="text-gray-300 hover:text-white transition-colors text-sm"
+    >
+      Donate
+    </Link>
+  </li>
+</ul>
             </div>
 
             {/* Contact */}
             <div className="w-full lg:w-fit">
-              <h3 className="text-lg font-semibold mb-6">Contact</h3>
+              <h3 className="text-lg font-semibold mb-3">Contact</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <img
@@ -108,35 +122,57 @@ export default function Footer() {
                     <p className="text-gray-300 text-sm">+91 9718346691</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 pt-2">
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors"
-                    aria-label="LinkedIn"
-                  >
-                    <img src="./images/linkedin.png" alt="linkedin img" />
-                  </a>
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors"
-                    aria-label="Instagram"
-                  >
-                    <img src="./images/instagram.png" alt="" />
-                  </a>
-                  <a
-                    href="https://youtube.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors"
-                    aria-label="YouTube"
-                  >
-                    <img src="./images/youtube.png" alt="" />
-                  </a>
-                </div>
+                <div className="flex items-center gap-4 pt-2 text-xl ">
+  <a
+    href="https://www.facebook.com/share/17P7Na1y8X/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+    className="text-gray-300 hover:text-white transition-colors"
+  >
+    <FaFacebookF />
+  </a>
+
+  <a
+    href="https://www.instagram.com/swastiksrijan?igsh=bGE5N3diOXkzYnNr"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="text-gray-300 hover:text-white transition-colors"
+  >
+    <FaInstagram />
+  </a>
+
+  <a
+    href="https://x.com/SSF_India2013"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="X (Twitter)"
+    className="text-gray-300 hover:text-white transition-colors"
+  >
+    <FaXTwitter />
+  </a>
+
+  <a
+    href="https://youtube.com/@swastiksrijanofficial?si=TtzvHm3l_-vO02NX"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="YouTube"
+    className="text-gray-300 hover:text-white transition-colors"
+  >
+    <FaYoutube />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/swastik-srijan-foundation-440388247"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+    className="text-gray-300 hover:text-white transition-colors "
+  >
+    <FaLinkedinIn />
+  </a>
+</div>
               </div>
             </div>
           </div>

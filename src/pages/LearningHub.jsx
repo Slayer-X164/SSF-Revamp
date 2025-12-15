@@ -35,13 +35,14 @@ const LearningHub = () => {
             </h2>
           </div>
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="flex items-center justify-center">
-              <img
-                src="./images/learningHub1.png"
-                alt=""
-                className="h-[70vh]"
-              />
-            </div>
+           <div className="flex items-center justify-center">
+  <img
+    src="./images/learningHub1.png"
+    alt=""
+    className="h-[70vh] w-auto object-contain"
+  />
+</div>
+
             <div className="flex items-center md:items-start gap-4 justify-center text-center md:text-start md:justify-around flex-col">
               <h3 className="text-3xl font-bold tracking-normal max-w-[450px]">
                 Free education. Practical skills. Real opportunities.
