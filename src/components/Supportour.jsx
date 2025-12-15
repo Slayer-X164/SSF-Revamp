@@ -3,6 +3,7 @@ import QRcode from "../assets/QR.png";
 import { IoCopyOutline } from "react-icons/io5";
 import toast from "react-hot-toast";
 import { Toaster } from "react-hot-toast";
+import Barcode from "../assets/barcode.jpg";
 function Supportour() {
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text);
@@ -50,11 +51,11 @@ function Supportour() {
 
           {/* QR Box */}
           <div className="flex flex-col items-center justify-center bg-blue-100 p-6 rounded border border-dashed w-full max-w-[420px]">
-            <img src={QRcode} className="w-40 h-40" />
+            <img src={Barcode} className="w-40 h-40" />
 
             {/* UPI ID */}
             <div className="flex items-center gap-2 bg-white px-4 py-2 mt-4  shadow-[4px_4px_0px_#2b80ff] w-fit">
-              <span>5375395739@oksbi</span>
+              <span>swastikstijanfoundation@ptyes</span>
 
               <span
                 className="text-blue-600 cursor-pointer ml-6 flex items-center gap-1"
